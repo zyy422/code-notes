@@ -2,7 +2,7 @@
 - 继承Thread类
 - 实现Runnable接口
 - 实现Callable接口
-  
+
 ## 继承Thread类
 创建一个线程类并继承Thread，实现线程的run方法
 ```java
@@ -37,7 +37,7 @@ Runnable接口封装的异步任务，可以将其认为是一个没有参数和
         thread3.start();
         ToolBox.log("主线程获取的线程3返回信息:" + task3.get());
 ```
-Callable任务与Runnable的方式相似，但是其有返回值。注意```task3.get()```将阻塞线程,知道线程返回。如果超时，则将抛出一个TimeoutException。
+Callable任务与Runnable的方式相似，但是其有返回值。注意```task3.get()```将阻塞线程,直到线程返回。如果超时，则将抛出一个TimeoutException。
 
 FutureTask这个类继承自Future有几个函数，可以初步掌握一下.
 
