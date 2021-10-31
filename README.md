@@ -3,6 +3,9 @@
 全文均为个人整理，欢迎大家阅读和批评指正
 
 ## Java
+[Java 函数式编程](./Java/FunctionalCoding.md)
+
+
 [Stream API(Java 8 新特性)](./Java/StreamApi.md)
 
 [Java 多线程](./Java/MultiThread.md)
