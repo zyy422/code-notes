@@ -21,3 +21,5 @@
 [Java 设计模式](./Java/DesignPattern.md)
 
 [Java 回调函数](./Java/Callback.md)
+
+[Jackson 简单使用](./Java/JacksonUsage.md)
