@@ -20,4 +20,4 @@
 
 [Java 设计模式](./Java/DesignPattern.md)
 
-[Java 回调](./Java/Callback.md)
+[Java 回调函数](./Java/Callback.md)
