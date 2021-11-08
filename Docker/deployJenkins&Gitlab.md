@@ -36,6 +36,9 @@ docker start ubuntu
 # 宿主机的/home/gitlab目录映射到容器的/home/gitlab-container
 # 以后台模式运行
 docker run -p 80:81 -d -v /home/gitlab:/home/gitlab-container nginx
+
+# 进入docker容器中
+docker exec -it [dockerid] bash
 ```
 
 ## Jenkins部署
