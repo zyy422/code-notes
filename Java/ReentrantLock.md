@@ -17,11 +17,14 @@ ReentrantLock: 轻量级锁，基于cas和volatile，不需要线程切换，获
 
 ## 公平和非公平
 Synchronzied: 仅有非公平锁
+
 ReentrantLock: 默认非公平，也可以构造公平锁(**是否允许插队的区别**)
 ## 可终端和不可中断
 Synchronzied：不可中断
+
 ReentrantLock：可中断和不可中断
 
 ## 条件队列
 Synchronzied：仅有一个等待队列
+
 ReentrantLock：可以对应多个等待队列
