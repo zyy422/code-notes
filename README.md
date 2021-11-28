@@ -26,3 +26,9 @@
 
 ## Docker
 [Docker 部署Jenkins和Gitlab](./Docker/deployJenkins&Gitlab.md)
+
+## Linux
+[Linux系统中常用的三剑客](./Linux/threeTools.md)
+
+## JUC
+[Synchronzied和ReentrantLock的区别](./Java/ReentrantLock.md)
