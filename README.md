@@ -24,6 +24,10 @@
 
 [Jackson 简单使用](./Java/JacksonUsage.md)
 
+[Optional 使用和总结](./Java/Optional.md)
+
+[HashMap深思探索](./Java/HashMap.md)
+
 ## Docker
 [Docker 部署Jenkins和Gitlab](./Docker/deployJenkins&Gitlab.md)
 
