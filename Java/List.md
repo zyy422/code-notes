@@ -73,12 +73,12 @@ private void grow(int minCapacity) {
     elementData = Arrays.copyOf(elementData, newCapacity);
 }
 
-    public Vector(int initialCapacity, int capacityIncrement) {
-        super();
-        if (initialCapacity < 0)
-            throw new IllegalArgumentException("Illegal Capacity: "+
-                                               initialCapacity);
-        this.elementData = new Object[initialCapacity];
-        this.capacityIncrement = capacityIncrement; // 设置容器的每次扩容增量
-    }
+public Vector(int initialCapacity, int capacityIncrement) {
+    super();
+    if (initialCapacity < 0)
+        throw new IllegalArgumentException("Illegal Capacity: "+
+                                            initialCapacity);
+    this.elementData = new Object[initialCapacity];
+    this.capacityIncrement = capacityIncrement; // 设置容器的每次扩容增量
+}
 ```
