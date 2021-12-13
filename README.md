@@ -28,6 +28,8 @@
 
 [HashMap 深思熟虑](./Java/HashMap.md)
 
+[ArrayList, LinkedList, Vector 简单分析](./Java/List.md)
+
 ## Docker
 [Docker 部署Jenkins和Gitlab](./Docker/deployJenkins&Gitlab.md)
 
