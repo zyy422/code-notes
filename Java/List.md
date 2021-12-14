@@ -50,13 +50,6 @@ private void grow(int minCapacity) {
 
 底层实现为双向链表，插入更加优于ArrayList，但是随机访问略微逊色，需要从头到位进行迭代。**线程不安全**
 
-## Vector
-
-- 底层数据结构为数组
-- 每次扩容为2倍进行
-- 线程安全
-- 默认初始大小为10
-
 ### 扩容策略(源码追踪)
 ```java
 // LinkedList的其中一个变量，记录了链表的大小
@@ -98,6 +91,15 @@ void linkLast(E e) {
     modCount++;
 }
 ```
+
+## Vector
+
+- 底层数据结构为数组
+- 每次扩容为2倍进行
+- 线程**安全**
+- 默认初始大小为10
+
+### 扩容策略(源码追踪)
 
 ```java
 private void grow(int minCapacity) {
