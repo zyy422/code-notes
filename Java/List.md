@@ -61,11 +61,6 @@ transient Node<E> first;
 // 最后一个节点
 transient Node<E> last;
 
-public boolean add(E e) {
-    linkLast(e);
-    return true;
-}
-
 // 内部节点
 private static class Node<E> {
     E item;
@@ -77,6 +72,11 @@ private static class Node<E> {
         this.next = next;
         this.prev = prev;
     }
+}
+
+public boolean add(E e) {
+    linkLast(e);
+    return true;
 }
 
 void linkLast(E e) {
