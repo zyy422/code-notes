@@ -58,6 +58,46 @@ private void grow(int minCapacity) {
 - 默认初始大小为10
 
 ### 扩容策略(源码追踪)
+```java
+// LinkedList的其中一个变量，记录了链表的大小
+transient int size = 0;
+
+// 第一个节点
+transient Node<E> first;
+
+// 最后一个节点
+transient Node<E> last;
+
+public boolean add(E e) {
+    linkLast(e);
+    return true;
+}
+
+// 内部节点
+private static class Node<E> {
+    E item;
+    Node<E> next;
+    Node<E> prev;
+
+    Node(Node<E> prev, E element, Node<E> next) {
+        this.item = element;
+        this.next = next;
+        this.prev = prev;
+    }
+}
+
+void linkLast(E e) {
+    final Node<E> l = last;
+    final Node<E> newNode = new Node<>(l, e, null); // 当前节点也存放了上一个节点的指针，指向前驱
+    last = newNode;
+    if (l == null)          // 对于第一次add元素，last = first
+        first = newNode;
+    else
+        l.next = newNode;   // 否则，将尾部节点的指针指向新add的节点
+    size++;
+    modCount++;
+}
+```
 
 ```java
 private void grow(int minCapacity) {
