@@ -2,7 +2,23 @@
 
 ## HashMap的默认容量
 
-在栈中构建HashMap的过程中，如果未制定其初始容量大小，其默认的大小为16。
+在栈中构建HashMap的过程中，如果未制定其初始容量大小，其默认的大小为16。下面给出HashMap的三个构造函数
+
+```java
+public HashMap() {
+    this.loadFactor = DEFAULT_LOAD_FACTOR; // 不传入任何参数，默认的负载因子为0.75，默认容量为16
+}
+public HashMap(int initialCapacity) {
+        this(initialCapacity, DEFAULT_LOAD_FACTOR); // 让用户可以指定初始大小，但是负载因子默认还是设置为0.75
+}
+public HashMap(int initialCapacity, float loadFactor) // 可以让用户指定初始大小和负载因子
+```
+## 什么又是负载因子？
+
+**负载因子**用于决定HashMap的容量不够时，何时进行扩容，这个扩容的时机决定了**容量**和**速率**的综合考量。
+
+因为如果HashMap里元素放满了再扩容，那必然其Hash碰撞率也会很高，因此很容易出现**链化**的情况。
+
 
 ## 扩容机制
 
