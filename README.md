@@ -40,3 +40,5 @@
 [Synchronzied和ReentrantLock的区别](./Java/ReentrantLock.md)
 
 [CAS问题](./Java/CAS.md)
+
+[Java内存模型](./Java/JavaThreadModel.md)
