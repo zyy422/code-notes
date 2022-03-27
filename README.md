@@ -32,6 +32,7 @@
 
 ## Docker
 [Docker 部署Jenkins和Gitlab](./Docker/deployJenkins&Gitlab.md)
+[Dockerfile 构建mysql基础镜像](./Docker/deployMysql.md)
 
 ## Linux
 [Linux系统中常用的三剑客](./Linux/threeTools.md)
@@ -49,3 +50,4 @@
 
 ## 前端
 [css样式学习](./css/index.md)
+[Promise学习](./Javascript/promise.md)
