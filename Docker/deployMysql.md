@@ -1,9 +1,9 @@
-# Dockerfile 构建mysql基础镜像
+# Dockerfile 构建MySQL基础镜像环境
 
 ## 选择合适的mysql基础镜像
 ```docker
 # 由于m1芯片，需要指定平台
-docker pull --platform linxu/x86_64 mysql:5.7
+docker pull --platform linxu/amd64 mysql:5.7
 ```
 
 ## 编写Dockerfile文件
@@ -35,14 +35,26 @@ docker build -t my-builder/mysql:1.0 ./
 
 ## 启动镜像并初始化数据库
 ```docker
-docker run -d  -t -i -p 3306:3306 [image id] /bin/bash
+docker run -d  -t -i -p 3306:3306 [image id] /bin/bash 
+
+# 如果不加-d,无法后台运行，自身的terminal一旦退出，则容器停止
 ```
 - -d：以Daemonized执行 
 - -t: 分配一个伪终端
-- -i: 保持容器的标准输入打开
+- -i:  保持打开容器的标准输入
 - -p: 端口映射
 
+## 进入到容器中
+
+```dockerfile
+docker exec -it [container ID] /bin/bash
+```
+
+- 如果仅制定-i,那么容器接受标准输入，但是没有分配伪终端
+- 如果仅制定-t，那么无法接受标准输入，因此所有命令无效。
+
 ## 启动一个私人docker仓库 [Server]
+
 ```
 docker run -d -p 5000:5000 --restart=always --name registry registry
 ```
